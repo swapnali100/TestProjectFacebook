@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QARegressionSuite"  thread-count="2" parallel="classes">
+ <listeners>
+ <listener class-name= "extendReport.ExtentTestNGIReporterListener"/>
+ </listeners>
+  
+  <test  name="chromeTest">
+  <parameter name = "browser" value = "chrome"/>
+    <classes>
+       <class name="package1.ToVerifyHeader"/>
+        <class name="package1.ToVerifyLoginPage"/>
+     </classes>
+  </test> <!-- Test -->
+  
+  
+  <test  name="firefoxTest">
+  <parameter name = "browser" value = "firefox"/>
+    <classes>
+       <class name="package1.ToVerifyLoginPage"/>
+        <class name="package1.ToVerifyHeader"/>
+     </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- QARegressionSuite -->
